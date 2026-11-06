@@ -1,0 +1,11 @@
+{
+  "name": "Growtree-Proxy",
+  "version": "1.0.0",
+  "description": "SOCKS5 tunnel terbalik: server di bot hosting, agent di Android/Termux (IP keluar = IP ponsel). Tanpa dependensi.",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "agent": "node agent.js"
+  }
+}
