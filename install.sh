@@ -111,7 +111,7 @@ data.version ??= '1.0.0';
 data.private = true;
 data.type = 'module';
 data.scripts ??= {};
-data.scripts.start = 'node agent.js';
+data.scripts.agent = 'node agent.js';
 fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`);
 NODE
 
