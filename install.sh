@@ -106,7 +106,8 @@ if (fs.existsSync(file)) {
     process.exit(1);
   }
 }
-data.name ??= 'growtree-proxy-tunnel-agent';
+data.name ??= 'Growtree-Proxy';
+data.description ??= 'SOCKS5 tunnel terbalik: server di bot hosting, agent di Android/Termux (IP keluar = IP ponsel). Tanpa dependensi.';
 data.version ??= '1.0.0';
 data.private = true;
 data.type = 'module';
