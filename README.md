@@ -66,7 +66,7 @@ Setelah instalasi selesai:
 
 ```bash
 cd ~/proxy-socks5
-npm start
+npm agent
 ```
 
 Alternatifnya:
