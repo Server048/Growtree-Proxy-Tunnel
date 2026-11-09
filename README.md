@@ -42,6 +42,11 @@ Agent menggunakan WebSocket bawaan Node.js, sehingga Node.js versi lama tidak di
 
 Buka Termux, lalu jalankan satu command berikut:
 
+Install Curl:
+```bash
+pkg install curl
+```
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Server048/Growtree-Proxy-Tunnel/main/install.sh | bash
 ```
@@ -91,14 +96,14 @@ Konfigurasi dapat diberikan melalui environment variable atau file `.env` lokal 
 | Variabel | Default | Keterangan |
 |---|---|---|
 | `USER_TOKEN` | Tidak diatur | Token akun GrowTree. Jika tidak tersedia, agent meminta token secara interaktif. |
-| `SERVER_URL` | `ws://agent.growtree.my.id:25380/agent` | URL endpoint WebSocket agent. Mendukung skema `ws://` atau `wss://`. |
+| `SERVER_URL` | `wss://agent.growtree.my.id:25380/agent` | URL endpoint WebSocket agent. Mendukung skema `ws://` atau `wss://`. |
 | `MAX_STREAMS` | `1024` | Batas maksimum stream TCP yang ditangani agent. |
 | `ALLOW_PRIVATE` | `0` / tidak aktif | Jika disetel ke `1`, tujuan jaringan privat tidak lagi diblokir oleh pemeriksaan agent. Gunakan dengan sangat hati-hati. |
 
 Contoh `.env` tanpa menyimpan token:
 
 ```dotenv
-SERVER_URL=ws://agent.growtree.my.id:25380/agent
+SERVER_URL=wss://agent.growtree.my.id:25380/agent
 MAX_STREAMS=1024
 # ALLOW_PRIVATE=0
 ```
@@ -139,7 +144,7 @@ Perbarui package Termux, lalu pasang Node.js:
 
 ```bash
 pkg update && pkg upgrade -y
-pkg install nodejs -y
+pkg install nodejs -y && pkg install curl -y
 node --version
 ```
 
