@@ -446,7 +446,7 @@ function askHidden(question) {
   });
 }
 
-const DEFAULT_URL = 'ws://agent.growtree.my.id:25380/agent';
+const DEFAULT_URL = 'wss://agent.growtree.my.id:25380/agent';
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   clearTerminal();
