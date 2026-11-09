@@ -42,11 +42,6 @@ Agent menggunakan WebSocket bawaan Node.js, sehingga Node.js versi lama tidak di
 
 Buka Termux, lalu jalankan satu command berikut:
 
-Install Curl:
-```bash
-pkg install curl
-```
-
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Server048/Growtree-Proxy-Tunnel/main/install.sh | bash
 ```
